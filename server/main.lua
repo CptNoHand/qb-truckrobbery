@@ -48,6 +48,7 @@ AddEventHandler('qb-armoredtruckheist:server:callCops', function(streetLabel, co
     local msg = "The Alram has been activated from a "..place.. " at " ..streetLabel
 
     TriggerClientEvent("qb-armoredtruckheist:client:robberyCall", -1, streetLabel, coords)
+	TriggerServerEvent('police:server:policeAlert', 'Robbery In Progress')
 
 end)
 
